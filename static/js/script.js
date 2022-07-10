@@ -62,6 +62,10 @@ const changeEmoji = () => {
   $('#emoji').addClass("button-click");
 };
 
+const blink = () => {
+  $('#emoji').addClass("button-click");
+};
+
 const rotateEmoji = () => {
   emoDeg += rotationRate;
   $('#emoji').rotate(emoDeg);
@@ -136,7 +140,7 @@ $(window).load(
   () => {
     setTimeout(() => { $('#loading').hide(); $('#change_class').show(); }, 1000);  
     setInterval(rotateEmoji, rotationInterval);
-    // setInterval(changeEmoji, 2500);
+    setInterval(blink, 2500);
     setInterval(timer, 1000);
   }
 );

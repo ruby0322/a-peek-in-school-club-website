@@ -136,12 +136,32 @@ function closeModal(modal) {
   overlay.classList.remove('active');
 }
 
+
+let chosenOption = -1;
+let optionCard1 = $('#option-card1');
+let optionCard2 = $('#option-card2');
+
+const updateOptions = () => {
+  if (chosenOption == 1) {
+    optionCard1.addClass('scale');
+    optionCard1.css('background-color', '#a9c7ac !important');
+    optionCard2.removeClass('scale');
+    optionCard2.css('background-color', 'white !important');
+  } else if (chosenOption == 2) {
+    optionCard2.addClass('scale');
+    optionCard2.css('background-color', '#a9c7ac !important');
+    optionCard1.removeClass('scale');
+    optionCard1.css('background-color', 'white !important');
+  }
+};
+
 $(window).load(
   () => {
     setTimeout(() => { $('#loading').hide(); $('#change_class').show(); }, 1000);  
     setInterval(rotateEmoji, rotationInterval);
     setInterval(blink, 2500);
     setInterval(timer, 1000);
+    setInterval(updateOptions, 100);
   }
 );
 
@@ -166,5 +186,3 @@ function timer() {
   const s = sec >= 10 ? sec : '0' + sec;
   $("#timer").text(`${d} d ${h} h ${m} m ${s} s`);
 }
-
-

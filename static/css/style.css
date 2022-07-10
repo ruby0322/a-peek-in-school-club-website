@@ -7,6 +7,18 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+.selected {
+	background-color: none;
+	background-color: #a9c7ac !important;
+}
+
+.quote {
+	width: 70%;
+	text-align: start;
+	border-left: solid 3px #4D4D4D;
+	padding-left: 7px;
+}
+
 .side-margin {
 	margin-left: 2rem;
 	margin-right: 2rem;
@@ -15,6 +27,10 @@ header-bg: #0E1017
 
 .hover-pointer:hover {
 	cursor: pointer;
+}
+
+.bg-white {
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .bg-trans {
@@ -130,6 +146,12 @@ hr {
 	text-align: center !important;
 }
 
+.no-shadow {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
 .comment {
 	display: flex;
 	flex-direction: row;
@@ -159,7 +181,7 @@ hr {
 	display: block;
 	width: 100%;
 	height: fit-content;
-	margin: 0;
+	margin: 0 !important;
 	text-align: right;
 	font-style: italic;
 	opacity: 0.5;
@@ -616,6 +638,12 @@ a:hover,a:active {color: #001f3f;}
 	-webkit-transform: scale(1.0);
 	-ms-transform: scale(1.0);
 	transform: scale(1.0);
+}
+
+.scale {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .hover-scale:hover {

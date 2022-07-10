@@ -52,7 +52,7 @@ let clickCnt = 0;
 let rotationRate = 0;
 
 const changeEmoji = () => {
-  const emojis = ['🗺️', '⚔️', '💰', '🏴‍☠️', '⚓', '🏝️', '🛟', '🪙', '☠️', '🔱', '🆘', '🏆', '🎯', '💎', '💵', '💴', '🩸', '🗡', '🔪', '👑'];
+  const emojis = ['🧑‍🎓', '👩‍🎓', '👨‍🎓', '👨‍🏫', '🧑‍🏫', '👩‍🏫'];
   const curr = $('#emoji').context.outerText;
   let next = curr;
   while (next === curr) {
@@ -74,7 +74,7 @@ const rotateEmoji = () => {
 };
 
 $("#emoji").on("click", function() {
-  rotationRate += 3;
+  changeEmoji();
 });
 
 $("#emoji").on("webkitAnimationEnd", function() { $(this).removeClass("button-click"); });
@@ -136,7 +136,7 @@ $(window).load(
   () => {
     setTimeout(() => { $('#loading').hide(); $('#change_class').show(); }, 1000);  
     setInterval(rotateEmoji, rotationInterval);
-    setInterval(changeEmoji, 2500);
+    // setInterval(changeEmoji, 2500);
     setInterval(timer, 1000);
   }
 );

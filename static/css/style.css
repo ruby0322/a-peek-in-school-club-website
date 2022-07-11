@@ -7,6 +7,38 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+.avatar-light-bg {
+	background-color: rgba(135,206,235, 0.3) !important;
+}
+
+.avatar-j {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944176883609650/11.png');
+}
+
+.avatar-i {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944134827319406/9.png');
+}
+
+.avatar-h {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944135045414942/10.png');
+}
+
+.avatar-g {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944134437261392/7.png');
+}
+
+.avatar-f {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944134214959164/6.png');
+}
+
+.avatar-e {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944133946519603/5.png');
+}
+
+.avatar-d {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995944133741006858/4.png');
+}
+
 .subtitle {
 	max-width: 70vw !important;
 	text-align: start !important;
@@ -151,8 +183,8 @@ hr {
 	width: 6rem; 
 	height: 5.4rem; 
 	margin-right: 1.8rem; 
-	margin-left: .5rem; 
-	margin-top: .3rem !important;
+	margin-left: .4rem; 
+	margin-top: .2rem !important;
 	margin-bottom: .3rem !important;
 	border-radius: 10px; 
 	overflow: hidden;
@@ -160,6 +192,9 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .avatar-pic {

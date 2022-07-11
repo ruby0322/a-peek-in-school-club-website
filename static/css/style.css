@@ -51,8 +51,12 @@ header-bg: #0E1017
 }
 
 .subtitle {
-	max-width: 70vw !important;
-	text-align: start !important;
+	font-size: x-large; 
+	padding: 5px; 
+	text-align: left; 
+	color: black; 
+	margin: 0; 
+	max-width: 70vw;
 }
 
 .sprite {

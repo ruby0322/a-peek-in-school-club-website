@@ -64,6 +64,7 @@ const changeEmoji = () => {
 
 const blink = () => {
   $('#emoji').addClass("button-click");
+  $('#character-wrapper').addClass("button-click");
 };
 
 const rotateEmoji = () => {
@@ -81,7 +82,22 @@ $("#emoji").on("click", function() {
   changeEmoji();
 });
 
+let characterSprite = 1;
+$('#character-wrapper').on('click', function() {
+  console.log('clicked');
+  if (characterSprite == 1) {
+      $('#character').removeClass('sprite-happy');
+      $('#character').addClass('sprite-sad');
+      characterSprite = 2;
+    } else {
+      $('#character').removeClass('sprite-sad');
+      $('#character').addClass('sprite-happy');
+      characterSprite = 1;
+  }
+});
+
 $("#emoji").on("webkitAnimationEnd", function() { $(this).removeClass("button-click"); });
+$("#character-wrapper").on("webkitAnimationEnd", function() { $(this).removeClass("button-click"); });
 
 jQuery.fn.rotate = function(degrees) {
   $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
@@ -142,6 +158,7 @@ let optionCard1 = $('#option-card1');
 let optionCard2 = $('#option-card2');
 
 const updateOptions = () => {
+  $('#result').show();
   if (chosenOption == 1) {
     optionCard1.addClass('scale');
     optionCard1.css('background-color', '#a9c7ac !important');
@@ -161,7 +178,7 @@ $(window).load(
     setInterval(rotateEmoji, rotationInterval);
     setInterval(blink, 2500);
     setInterval(timer, 1000);
-    setInterval(updateOptions, 100);
+    // setInterval(updateOptions, 100);
   }
 );
 

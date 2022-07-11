@@ -14,6 +14,7 @@
 	<title>當學長姐制成為管理工具</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Manrope:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Manrope:wght@600;800&family=Poppins&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Noto+Serif+TC&display=swap" rel="stylesheet">
@@ -45,9 +46,8 @@
 </div>
 <a name="top"></a>
 <a href="#top"> <div class="arrow_image">⬆️</div></a>
-<div id="change_class" class="flex_container section menu_section" style="display: none;">
-	<div class="flex_item branding"><a href="#top"><p>🧑‍🎓</p></a></div>
-	<div class="flex_item menu_item dropdown">
+<div class="flex_container section menu_section" style="background: none; margin-top: 1rem; margin-left: -2rem;">
+	<div class="flex_item branding sprite sprite-happy" style="background-color: rgba(135,206,235, 0.5) !important;"><a href="#top"></a></div>
 	</div>
 </div>
 
@@ -72,11 +72,11 @@
 				font-size: 3rem;
 				max-width: 80vw;
 			">
-				當
-				<strong style="font-size: 3.4rem; color: #88382F;">
-					學長姐制
+                小高一
+				<strong style="font-size: 3.4rem; color: #6593f5;">
+					皓皓
 				</strong>
-				成為管理工具
+                的開學日
 			</h1>
 			<div style="margin-bottom: 3.5rem;">
 				<span style="
@@ -88,40 +88,58 @@
                     回到高中開學那天，你，會怎麼選？
 				</span>
 			</div>
-			<h1 id="emoji" style="
-				margin: 0;
-				font-size: 8rem;
-				user-select: none;
-				margin-bottom: 2.5rem;
-			"
-				class="button button-effect"
-			>
-				🧑‍🎓
-			</h1>
-			</div>
-			<div class="flex_item">
-			<h2 class="header_quote" style="
-				font-family: 'Roboto', sans-serif;
-				font-size: xx-large;
-				color: #768CB1;
-			">
-				<div class="tags" style="flex-direction: row !important;">
-					<a href="/home" style="cursor: pointer;" data-modal-target="#pt">
-						<div class="feature flex_feature_item tag">
-                            <- 回到首頁 
-						</div>
-					</a>
-                    <a href="#step1" style="cursor: pointer;" data-modal-target="#pt">
-						<div class="feature flex_feature_item tag">
-							開始冒險 ↓
-						</div>
-					</a>
-				</div>
-			</h2>
+            <div id="character-wrapper" class="center button button-effect">
+                <div id="character" style="
+                    width: 16rem !important;
+                    height: 16rem !important;
+                    margin: 0;
+                    user-select: none;
+                    margin-bottom: 2.5rem;
+                "
+                class="button-effect sprite sprite-happy"
+                >
+                </div>
+            </div>
+            <div class="tags" style="flex-direction: row !important;">
+                <a href="/home" style="cursor: pointer;" data-modal-target="#pt">
+                    <div class="feature flex_feature_item tag">
+                        <- 回到首頁 
+                    </div>
+                </a>
+                <a href="#step0" style="cursor: pointer;" data-modal-target="#pt">
+                    <div class="feature flex_feature_item tag">
+                        開始遊戲 ↓
+                    </div>
+                </a>
+            </div>
 		</div>
 	</div>
 </div>
 
+<div class="page" style=" 
+    background-color: black; 
+    background-image: url('https://media.discordapp.net/attachments/991012818490908752/995929172482469988/a896025ea3976537.png?width=1410&height=793'); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+">
+    <a name="step0"></a>
+    <div style="height: 80vh;">
+        <div style="display: none;">
+            .
+        </div>
+    </div>
+    <div class="tags">
+        <a href="#step1" style="cursor: pointer;" data-modal-target="#pt">
+            <div class="feature flex_feature_item tag" style="
+                background-color: white;
+                color: black !important;
+            ">
+                走入校園
+            </div>
+        </a>
+    </div>
+</div>
 <div class="page" style="background-color: white;">
     <a name="step1"></a>
 	<div class="text">
@@ -155,17 +173,17 @@
         <a id="option-card1" class="hover-scale tag shadow bg-trans hover-pointer side-margin" style="width: 20rem; margin-top: 2rem;"  data-modal-target="#option1">
 			<div class="center"">
 				<div class="pic" style="
-					background-image: url('https://media.discordapp.net/attachments/991012818490908752/995732122310541404/C3E65A68-64E7-434D-9F9F-2A4F323B0376.png');
+					background-image: url('https://media.discordapp.net/attachments/991012818490908752/995919756139966574/547d0cf7ae8a1223.png');
                     background-color: skyblue;
 					height: 14rem;
 					width: 14rem;
-                    background-size: 50% !important;
+                    background-size: 90% !important;
                     background-repeat: no-repeat;
 					border-radius: 50%;
 				"></div>
 			</div>
 			<h2 class="name">
-				小羊鈴鐺社
+				話劇社
 			</h2>
 			<div class="center col">
 				<p class="block text-blue text-align no-margin text-grey">
@@ -181,34 +199,43 @@
 		</a>
         <div class="modal" id="option1">
             <div class="modal-header">
-                <div class="title">小羊鈴鐺社</div>
+                <div class="title">話劇社</div>
                 <button data-close-button class="close-button">⚔️</button>
             </div>
             <div class="modal-body">
+                <div class="center">
+                    <div class="pic" style="
+                        background-image: url('https://media.discordapp.net/attachments/991012818490908752/995927688441241640/30c18e451e6ff5e2.png');
+                        width: 28rem;
+                        height: 16rem;
+                        background-size: contain !important;
+                    ">
+                    </div>
+                </div>
                 <p>
                     ...（聽到的內容）
                 </p>
                 <div class="center">
-                    <div data-close-button onclick="chosenOption=1; updateOptions();" class="tag hover-scale hover-pointer" style="background-color: #a9c7ac; color: black !important;">
+                    <a href="#step2" data-close-button onclick="chosenOption=1; updateOptions();" class="tag hover-scale hover-pointer" style="background-color: #a9c7ac; color: black !important;">
                         加入社團
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
         <a id="option-card2" class="hover-scale tag shadow hover-pointer side-margin bg-trans" style="width: 20rem; margin-top: 2rem;" data-modal-target="#option2">
 			<div class="center">
 				<div class="pic" style="
-					background-image: url('https://media.discordapp.net/attachments/991012818490908752/995732122310541404/C3E65A68-64E7-434D-9F9F-2A4F323B0376.png');
+					background-image: url('https://media.discordapp.net/attachments/991012818490908752/995922382432772207/d38edfef42e39dce.png');
                     background-color: skyblue;
 					height: 14rem;
 					width: 14rem;
-                    background-size: 50% !important;
+                    background-size: 85% !important;
                     background-repeat: no-repeat;
 					border-radius: 50%;
 				"></div>
 			</div>
 			<h2 class="name">
-				小羊鈴鐺社
+				追劇社
 			</h2>
 			<div class="center col">
 				<p class="block text-blue text-align no-margin text-grey">
@@ -228,17 +255,52 @@
                 <button data-close-button class="close-button">⚔️</button>
             </div>
             <div class="modal-body">
+                <div class="center">
+                    <div class="pic" style="
+                        background-image: url('https://media.discordapp.net/attachments/991012818490908752/995929898088665188/0db8ceb8ec87b512.png');
+                        background-size: contain !important;
+                        width: 28rem;
+                        height: 18rem;
+                    ">
+                    </div>
+                </div>
                 <p>
                     ...（聽到的內容）
                 </p>
                 <div data-close-button class="center">
-                    <div onclick="chosenOption=2; updateOptions();" class="tag hover-scale hover-pointer data-close-button" style="background-color: #a9c7ac; color: black !important;">
+                    <a href="#step2" onclick="chosenOption=2; updateOptions();" class="tag hover-scale hover-pointer data-close-button" style="background-color: #a9c7ac; color: black !important;">
                         加入社團
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div id="result" class="page" style="background-color: white; display: none;">
+    <a name="step2"></a>
+    <div class="text">
+		<h2 style="
+			color: black;
+			height: 20vh;
+			margin: 0 !important;
+			padding-top: 3rem;
+			font-size: 54px;
+		">
+            第一堂社課後
+		</h2>
+	</div>
+	<div class="center" style="margin-top: -3rem; margin-bottom: 1rem;">
+		<span style="
+			font-family: 'Quicksand', sans-serif;
+			color: #4D4D4D;
+			display: inline;
+			user-select: none;
+           
+		">
+			「怎麼跟想像中的不一樣...」
+		</span>
+	</div>
 </div>
 
 <div class="footer-section">

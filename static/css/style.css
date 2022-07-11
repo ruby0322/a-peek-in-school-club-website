@@ -7,6 +7,24 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+.sprite {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.sprite-sad {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995940559942324284/unknown.png');
+}
+
+.sprite-happy {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/995934440251465738/0d2709f91d66355c.png');
+}
+
+.text-black {
+	color: black !important;
+}
+
 .selected {
 	background-color: none;
 	background-color: #a9c7ac !important;
@@ -173,6 +191,7 @@ hr {
 .pic {
 	background-size: cover !important;
 	background-position: center !important;
+	background-repeat: no-repeat;
 	border-radius: 3px;
 	display: block;
 }

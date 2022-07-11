@@ -7,6 +7,17 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+.graph {
+	width: 16rem !important; 
+	max-width: 80vw;
+	margin: 2.5rem;
+}
+
+.subtitle-sm {
+	font-size: medium;
+	font-family: 'Poppins', sans-serif;
+}
+
 .avatar-light-bg {
 	background-color: rgba(135,206,235, 0.3) !important;
 }
@@ -48,6 +59,10 @@ header-bg: #0E1017
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.sprite-magnifier {
+	background-image: url('https://media.discordapp.net/attachments/991012818490908752/996050594659844146/unknown.png');
 }
 
 .sprite-sad {

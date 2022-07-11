@@ -15,6 +15,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Manrope:wght@600&family=Poppins&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Manrope:wght@600;800&family=Poppins&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>	'rgba(255, 99, 132, 0.2)',
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Noto+Serif+TC&display=swap" rel="stylesheet">
 </head>
@@ -73,7 +74,7 @@
 				margin-bottom: .5rem;
 				margin-top: 3.5rem;
 				color: white;
-				padding-top: 7rem;
+				padding-top: 2rem;
 				padding-left: 1.5rem;
 				padding-right: 1.5rem;
 				user-select: none;
@@ -96,16 +97,18 @@
 				社團管理如何建構校園權力關係
 				</span>
 			</div>
-			<h1 id="emoji" style="
-				margin: 0;
-				font-size: 8rem;
-				user-select: none;
-				margin-bottom: 2.5rem;
-			"
-				class="button button-effect"
-			>
-				🧑‍🎓
-			</h1>
+			<div id="character-wrapper" class="center button button-effect">
+                <div id="character" style="
+                    width: 16rem !important;
+                    height: 16rem !important;
+                    margin: 0;
+                    user-select: none;
+                    margin-bottom: 2.5rem;
+                "
+                class="button-effect sprite sprite-magnifier"
+                >
+                </div>
+            </div>
 			</div>
 			<div class="flex_item">
 			<h2 class="header_quote" style="
@@ -746,7 +749,211 @@
 			除了質化訪談外，我們也透過問卷的發放，調查學生如何看待學長姐制。在受試者中，有39.6%所屬的社團採用學長姐制，剩餘的60.3%則沒有。以下我們將針對兩個族群的回覆結果進行分析。
 		</p>
 	</div>
+	<div class="center">
+		<h2 style="font-size: x-large; padding: 5px; text-align: left; color: black; margin: 0;">
+			屬有學長姐制社團者的看法
+		</h2>
+	</div>
+	<div class="center">
+		<p class="description">
+			在調查結果中，有76%的受試者認為實施學長姐制對社團管理較有效率，然而，卻也有64%的受試者認為團體內的年齡差距不應該成為行使權威的因素。同時，也有68%的受試者認為學長姐制會加深不同屆之間的隔閡，但想對學長姐制做出改變的人數只有36%。
+		</p>
+	</div>
+	<div class="center">
+	<div class="flex row" style="margin-top: 3rem; margin-bottom: 3rem; max-width: 85vw;">
+		<div class="flex row">
+			<div class="graph">
+				<div class="center subtitle-sm">
+					實施學長姐制對社團管理較有效率
+				</div>
+				<canvas id="survey-result1">
+				</canvas>
+			</div>
+			<div class="graph">
+				<div class="center subtitle-sm">
+					年齡差距不應該成為行使權威因素
+				</div>
+				<canvas id="survey-result2">
+				</canvas>
+			</div>
+		</div>
+		<div class="flex row">
+			<div class="graph">
+				<div class="center subtitle-sm">
+					學長姐制會加深不同屆之間的隔閡
+				</div>
+				<canvas id="survey-result3">
+				</canvas>
+			</div>
+			<div class="graph">
+				<div class="center subtitle-sm">
+					想對學長姐制做出改變
+				</div>
+				<canvas id="survey-result4">
+				</canvas>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<div class="center">
+		<h2 style="font-size: x-large; padding: 5px; text-align: left; color: black; margin: 0;">
+			屬無學長姐制社團者的看法
+		</h2>
+	</div>
+	<div class="center">
+		<p class="description">
+			從我們的調查結果發現，此類型的受試者有63%對學長姐制有負面印象，且有92%的受試者認為學長姐制社團的管理方式不合理。然而在管理成效方面，卻僅有39%的受試者認為其社團的管理成效優於有學長姐制的社團。
+		</p>
+	</div>
+	
+	<div class="center">
+	<div class="flex row" style="margin-top: 3rem; margin-bottom: 3rem; max-width: 85vw;">
+		<div class="flex row">
+			<div class="graph">
+				<div class="center subtitle-sm">
+					對學長姐制有負面印象
+				</div>
+				<canvas id="survey-result5">
+				</canvas>
+			</div>
+			<div class="graph">
+				<div class="center subtitle-sm">
+					學長姐制社團的管理方式不合理
+				</div>
+				<canvas id="survey-result6">
+				</canvas>
+			</div>
+		</div>
+		<div class="flex col">
+			<div class="graph">
+				<div class="center subtitle-sm">
+					無學長姐制社團的管理成效較優
+				</div>
+				<canvas id="survey-result7">
+				</canvas>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="center">
+		<p class="description">
+			綜合以上問卷結果，可以發現受訪者普遍認為實施學長姐制對社團營運較有效率，然而，即便是學長姐制之下的「局內人」，也有大多數的受試者認為學長姐不應該以年齡作為取得權威的因素，且制度之下對團體的人際關係不利。而從無實施制度的「局外人」角度來看，則大部分的受試者對此制度皆沒有好感，但也認為學長姐制之下的社團運作較有效率。
+		</p>
+	</div>
 </div>
+
+<script>
+	let sr1 = document.getElementById('survey-result1');
+	let sr2 = document.getElementById('survey-result2');
+	let sr3 = document.getElementById('survey-result3');
+	let sr4 = document.getElementById('survey-result4');
+	let sr5 = document.getElementById('survey-result5');
+	let sr6 = document.getElementById('survey-result6');
+	let sr7 = document.getElementById('survey-result7');
+	const labels = ['認同', '不認同'];
+	const backgroundColors = ['rgb(101, 147, 245)', 'rgba(200, 200, 200, 0.5)'];
+	const data1 = {
+		labels: labels,
+		datasets: [{
+			label: '實施學長姐制對社團管理較有效率',
+			data: [76, 24],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	};
+	const data2 = {
+		labels: labels,
+		datasets: [{
+			label: '年齡差距不應該成為行使權威因素',
+			data: [64, 36],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	};
+	const data3 = {
+		labels: labels,
+		datasets: [{
+			label: '年齡差距不應該成為行使權威因素',
+			data: [68, 32],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	};
+	const data4 = {
+		labels: labels,
+		datasets: [{
+			label: '想對學長姐制做出改變',
+			data: [36, 64],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	}
+	const data5 = {
+		labels: labels,
+		datasets: [{
+			label: '對學長姐制有負面印象',
+			data: [63, 37],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	}
+	const data6 = {
+		labels: labels,
+		datasets: [{
+			label: '學長姐制社團的管理方式不合理',
+			data: [92, 8],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	}
+	const data7 = {
+		labels: labels,
+		datasets: [{
+			label: '無學長姐制社團的管理成效較優',
+			data: [39, 61],
+			backgroundColor: backgroundColors,
+			hoverOffset: 4
+		}]
+	}
+	const config1 = {
+		type: 'doughnut',
+		data: data1,
+	};
+	const config2 = {
+		type: 'doughnut',
+		data: data2
+	};
+	const config3 = {
+		type: 'doughnut',
+		data: data3
+	};
+	const config4 = {
+		type: 'doughnut',
+		data: data4
+	};
+	const config5 = {
+		type: 'doughnut',
+		data: data5,
+	};
+	const config6 = {
+		type: 'doughnut',
+		data: data6
+	};
+	const config7 = {
+		type: 'doughnut',
+		data: data7
+	};
+	const chart1 = new Chart(sr1, config1);
+	const chart2 = new Chart(sr2, config2);
+	const chart3 = new Chart(sr3, config3);
+	const chart4 = new Chart(sr4, config4);
+	const chart5 = new Chart(sr5, config5);
+	const chart6 = new Chart(sr6, config6);
+	const chart7 = new Chart(sr7, config7);
+</script>
+
 <div class="section page" style="
 	background-color: white;
 ">

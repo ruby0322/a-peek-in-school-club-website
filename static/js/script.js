@@ -159,6 +159,8 @@ if (chosenOption == 1) {
 
 $(window).load(
   () => {
+    $('#vid1').hide();
+    $('#vid2').hide();
     setTimeout(() => { $('#loading').hide(); $('#change_class').show(); }, 1000);  
     setInterval(rotateEmoji, rotationInterval);
     setInterval(blink, 2500);

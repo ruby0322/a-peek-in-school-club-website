@@ -313,6 +313,7 @@ hr {
 
 .tags {
 	width: 100%;
+	max-width: 80wv;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

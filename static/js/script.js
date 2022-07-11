@@ -88,6 +88,8 @@ $('#character-wrapper').on('click', function() {
   if (characterSprite == 1) {
       $('#character').removeClass('sprite-happy');
       $('#character').addClass('sprite-sad');
+      $('#chosen-option-card').html(`<div class="selected tag shadow bg-trans side-margin" style="width: 20rem; margin-top: 2rem;">
+			`);
       characterSprite = 2;
     } else {
       $('#character').removeClass('sprite-sad');
@@ -154,21 +156,19 @@ function closeModal(modal) {
 
 
 let chosenOption = -1;
-let optionCard1 = $('#option-card1');
-let optionCard2 = $('#option-card2');
 
 const updateOptions = () => {
   $('#result').show();
-  if (chosenOption == 1) {
-    optionCard1.addClass('scale');
-    optionCard1.css('background-color', '#a9c7ac !important');
-    optionCard2.removeClass('scale');
-    optionCard2.css('background-color', 'white !important');
+if (chosenOption == 1) {
+    $('#result1').show();
+    $('#result2').hide();
+    $('#option-card1').addClass('scale');
+    $('#option-card2').removeClass('scale');
   } else if (chosenOption == 2) {
-    optionCard2.addClass('scale');
-    optionCard2.css('background-color', '#a9c7ac !important');
-    optionCard1.removeClass('scale');
-    optionCard1.css('background-color', 'white !important');
+    $('#result2').show();
+    $('#result1').hide();
+    $('#option-card2').addClass('scale');
+    $('#option-card1').removeClass('scale');
   }
 };
 

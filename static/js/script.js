@@ -51,19 +51,7 @@ let emoDeg = 0;
 let clickCnt = 0;
 let rotationRate = 0;
 
-const changeEmoji = () => {
-  const emojis = ['🧑‍🎓', '👩‍🎓', '👨‍🎓', '👨‍🏫', '🧑‍🏫', '👩‍🏫'];
-  const curr = $('#emoji').context.outerText;
-  let next = curr;
-  while (next === curr) {
-    next = emojis[Math.floor(Math.random()*emojis.length)];
-  }
-  $('#emoji').text(next);
-  $('#emoji').addClass("button-click");
-};
-
 const blink = () => {
-  $('#emoji').addClass("button-click");
   $('#character-wrapper').addClass("button-click");
 };
 
@@ -77,10 +65,6 @@ const rotateEmoji = () => {
     rotationRate = 0;
   }
 };
-
-$("#emoji").on("click", function() {
-  changeEmoji();
-});
 
 let characterSprite = 1;
 $('#character-wrapper').on('click', function() {
@@ -98,7 +82,6 @@ $('#character-wrapper').on('click', function() {
   }
 });
 
-$("#emoji").on("webkitAnimationEnd", function() { $(this).removeClass("button-click"); });
 $("#character-wrapper").on("webkitAnimationEnd", function() { $(this).removeClass("button-click"); });
 
 jQuery.fn.rotate = function(degrees) {
@@ -152,6 +135,8 @@ function closeModal(modal) {
   if (modal == null) return;
   modal.classList.remove('active');
   overlay.classList.remove('active');
+  $('#vid1').hide();
+  $('#vid2').hide();
 }
 
 
@@ -178,7 +163,6 @@ $(window).load(
     setInterval(rotateEmoji, rotationInterval);
     setInterval(blink, 2500);
     setInterval(timer, 1000);
-    // setInterval(updateOptions, 100);
   }
 );
 

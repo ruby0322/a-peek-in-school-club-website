@@ -7,6 +7,12 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+.profile-pic {
+	height: 14rem;
+	width: 14rem;
+	border-radius: 50% !important;
+}
+
 .topic {
 	height: 20vh;
 	margin: 0 !important;

@@ -7,7 +7,9 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
-
+#vid1, #vid2 {
+	max-width: 70vw;
+}
 
 .arrow-image {
     position: fixed;

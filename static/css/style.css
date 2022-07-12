@@ -7,6 +7,29 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+
+.arrow-image {
+	position: fixed;
+	right: -6.6rem;
+	bottom: -6.5rem;
+	width: 100px;
+	height: 100px;
+	z-index: 200;
+
+    -webkit-transition: -webkit-transform .1s;
+	transition: transform .1s;
+
+	-webkit-transform: scale(2.0);
+	-ms-transform: scale(2.0);
+	transform: scale(2.0);
+}
+
+.arrow-image:hover {
+	-webkit-transform: scale(2.08);
+	-ms-transform: scale(2.08);
+	transform: scale(2.08);
+}
+
 .result-text {
 	display: block;
 	max-width: 70vw;

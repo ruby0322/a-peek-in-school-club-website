@@ -7,6 +7,26 @@ text-red: #8C342E
 header-bg: #0E1017
 */
 
+.topic {
+	height: 20vh;
+	margin: 0 !important;
+	padding-top: 5rem;
+	font-size: 54px;
+}
+
+.title-lg {
+	font-family: 'Poppins', sans-serif;
+	user-select: none;
+	font-size: 3rem;
+	max-width: 80vw;
+}
+
+.title-md {
+	font-family: 'Quicksand', sans-serif !important;
+	display: inline;
+	user-select: none;
+}
+
 .graph {
 	width: 16rem !important; 
 	max-width: 80vw;

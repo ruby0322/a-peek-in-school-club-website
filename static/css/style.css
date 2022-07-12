@@ -762,7 +762,6 @@ a:hover,a:active {color: #001f3f;}
 }
 
 .flex_center {justify-content: center;}
-.header_quote {border-radius: 5px; padding: 20px;}
 .header-section {
 	/* background-image: url(../static/images/bg5.png); */
 	background-color: #0E1017;
